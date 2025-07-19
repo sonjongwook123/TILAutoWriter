@@ -13,14 +13,14 @@ namespace TILAutoPublisher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            // 시작 화면 표시
-            var splashScreen = new SplashScreenForm();
-            splashScreen.Show();
-            Application.DoEvents();
-            System.Threading.Thread.Sleep(2000); // 2초간 스플래시 화면 표시
-            splashScreen.Close();
-            
+
+            using (var splashScreen = new SplashScreenForm())
+            {
+                // ShowDialog will block until the splash screen closes itself
+                // (e.g., by setting DialogResult and calling Close())
+                splashScreen.ShowDialog();
+            }
+
             Application.Run(new MainForm());
         }
     }

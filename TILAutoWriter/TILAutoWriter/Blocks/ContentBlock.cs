@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace TILAutoPublisher
@@ -113,13 +114,13 @@ namespace TILAutoPublisher
         private void InitializeComponent()
         {
             this.txtContent = new System.Windows.Forms.TextBox();
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.lblImageName = new System.Windows.Forms.Label();
             this.btnAddImage = new System.Windows.Forms.Button();
             this.btnRemoveImage = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.picImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,40 +129,31 @@ namespace TILAutoPublisher
             this.txtContent.AcceptsReturn = true;
             this.txtContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContent.Location = new System.Drawing.Point(3, 3);
+            this.txtContent.Location = new System.Drawing.Point(3, 4);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtContent.Size = new System.Drawing.Size(494, 100);
+            this.txtContent.Size = new System.Drawing.Size(993, 124);
             this.txtContent.TabIndex = 0;
-            // 
-            // picImage
-            // 
-            this.picImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(3, 109);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(494, 150);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImage.TabIndex = 1;
-            this.picImage.TabStop = false;
             // 
             // lblImageName
             // 
             this.lblImageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblImageName.AutoSize = true;
-            this.lblImageName.Location = new System.Drawing.Point(350, 262);
+            this.lblImageName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblImageName.Location = new System.Drawing.Point(818, 328);
             this.lblImageName.Name = "lblImageName";
-            this.lblImageName.Size = new System.Drawing.Size(69, 12);
+            this.lblImageName.Size = new System.Drawing.Size(87, 15);
             this.lblImageName.TabIndex = 2;
             this.lblImageName.Text = "이미지 없음";
             // 
             // btnAddImage
             // 
-            this.btnAddImage.Location = new System.Drawing.Point(3, 262);
+            this.btnAddImage.Location = new System.Drawing.Point(3, 328);
+            this.btnAddImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddImage.Name = "btnAddImage";
-            this.btnAddImage.Size = new System.Drawing.Size(75, 23);
+            this.btnAddImage.Size = new System.Drawing.Size(112, 29);
             this.btnAddImage.TabIndex = 3;
             this.btnAddImage.Text = "이미지 추가";
             this.btnAddImage.UseVisualStyleBackColor = true;
@@ -169,9 +161,10 @@ namespace TILAutoPublisher
             // 
             // btnRemoveImage
             // 
-            this.btnRemoveImage.Location = new System.Drawing.Point(84, 262);
+            this.btnRemoveImage.Location = new System.Drawing.Point(121, 328);
+            this.btnRemoveImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemoveImage.Name = "btnRemoveImage";
-            this.btnRemoveImage.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveImage.Size = new System.Drawing.Size(102, 29);
             this.btnRemoveImage.TabIndex = 4;
             this.btnRemoveImage.Text = "이미지 제거";
             this.btnRemoveImage.UseVisualStyleBackColor = true;
@@ -181,9 +174,10 @@ namespace TILAutoPublisher
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(422, 262);
+            this.btnRemove.Location = new System.Drawing.Point(911, 328);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.Size = new System.Drawing.Size(86, 29);
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "삭제";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -191,9 +185,10 @@ namespace TILAutoPublisher
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(165, 262);
+            this.btnUp.Location = new System.Drawing.Point(229, 328);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(40, 23);
+            this.btnUp.Size = new System.Drawing.Size(46, 29);
             this.btnUp.TabIndex = 6;
             this.btnUp.Text = "↑";
             this.btnUp.UseVisualStyleBackColor = true;
@@ -201,18 +196,33 @@ namespace TILAutoPublisher
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(211, 262);
+            this.btnDown.Location = new System.Drawing.Point(281, 328);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(40, 23);
+            this.btnDown.Size = new System.Drawing.Size(46, 29);
             this.btnDown.TabIndex = 7;
             this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
+            // picImage
+            // 
+            this.picImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picImage.Location = new System.Drawing.Point(3, 136);
+            this.picImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(993, 187);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImage.TabIndex = 1;
+            this.picImage.TabStop = false;
+            // 
             // ContentBlock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
@@ -222,11 +232,13 @@ namespace TILAutoPublisher
             this.Controls.Add(this.lblImageName);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.txtContent);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ContentBlock";
-            this.Size = new System.Drawing.Size(500, 288);
+            this.Size = new System.Drawing.Size(1000, 360);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.TextBox txtContent;

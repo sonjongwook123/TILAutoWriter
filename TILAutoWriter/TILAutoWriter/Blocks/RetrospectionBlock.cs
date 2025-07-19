@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace TILAutoPublisher
@@ -90,49 +91,55 @@ namespace TILAutoPublisher
             this.txtRetrospection.AcceptsReturn = true;
             this.txtRetrospection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRetrospection.Location = new System.Drawing.Point(3, 3);
+            this.txtRetrospection.Location = new System.Drawing.Point(3, 4);
+            this.txtRetrospection.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRetrospection.Multiline = true;
             this.txtRetrospection.Name = "txtRetrospection";
             this.txtRetrospection.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRetrospection.Size = new System.Drawing.Size(494, 80);
+            this.txtRetrospection.Size = new System.Drawing.Size(963, 99);
             this.txtRetrospection.TabIndex = 0;
+            this.txtRetrospection.TextChanged += new System.EventHandler(this.txtRetrospection_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 86);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 12);
+            this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "몰입 시간:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 111);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(3, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 12);
+            this.label2.Size = new System.Drawing.Size(77, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "내일 계획:";
             // 
             // numImmersionHours
             // 
-            this.numImmersionHours.Location = new System.Drawing.Point(78, 84);
+            this.numImmersionHours.Location = new System.Drawing.Point(89, 105);
+            this.numImmersionHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numImmersionHours.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
             this.numImmersionHours.Name = "numImmersionHours";
-            this.numImmersionHours.Size = new System.Drawing.Size(50, 21);
+            this.numImmersionHours.Size = new System.Drawing.Size(57, 25);
             this.numImmersionHours.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(134, 86);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(153, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "시간";
             // 
@@ -141,19 +148,21 @@ namespace TILAutoPublisher
             this.txtTomorrowPlan.AcceptsReturn = true;
             this.txtTomorrowPlan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTomorrowPlan.Location = new System.Drawing.Point(78, 109);
+            this.txtTomorrowPlan.Location = new System.Drawing.Point(89, 136);
+            this.txtTomorrowPlan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTomorrowPlan.Multiline = true;
             this.txtTomorrowPlan.Name = "txtTomorrowPlan";
             this.txtTomorrowPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTomorrowPlan.Size = new System.Drawing.Size(419, 80);
+            this.txtTomorrowPlan.Size = new System.Drawing.Size(877, 99);
             this.txtTomorrowPlan.TabIndex = 5;
             // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(422, 195);
+            this.btnRemove.Location = new System.Drawing.Point(881, 244);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.Size = new System.Drawing.Size(86, 29);
             this.btnRemove.TabIndex = 6;
             this.btnRemove.Text = "삭제";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -161,9 +170,10 @@ namespace TILAutoPublisher
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(3, 195);
+            this.btnUp.Location = new System.Drawing.Point(3, 244);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(40, 23);
+            this.btnUp.Size = new System.Drawing.Size(46, 29);
             this.btnUp.TabIndex = 7;
             this.btnUp.Text = "↑";
             this.btnUp.UseVisualStyleBackColor = true;
@@ -171,9 +181,10 @@ namespace TILAutoPublisher
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(49, 195);
+            this.btnDown.Location = new System.Drawing.Point(56, 244);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(40, 23);
+            this.btnDown.Size = new System.Drawing.Size(46, 29);
             this.btnDown.TabIndex = 8;
             this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = true;
@@ -181,8 +192,10 @@ namespace TILAutoPublisher
             // 
             // RetrospectionBlock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
@@ -193,11 +206,13 @@ namespace TILAutoPublisher
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtRetrospection);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RetrospectionBlock";
-            this.Size = new System.Drawing.Size(500, 221);
+            this.Size = new System.Drawing.Size(970, 276);
             ((System.ComponentModel.ISupportInitialize)(this.numImmersionHours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.TextBox txtRetrospection;
@@ -209,5 +224,10 @@ namespace TILAutoPublisher
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
+
+        private void txtRetrospection_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
