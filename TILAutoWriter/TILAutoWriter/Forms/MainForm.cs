@@ -1,3 +1,6 @@
+using Guna.UI2.WinForms; // Guna.UI2.WinForms 네임스페이스 추가
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +14,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Guna.UI2.WinForms; // Guna.UI2.WinForms 네임스페이스 추가
+using static Guna.UI2.WinForms.Suite.Descriptions;
 
 namespace TILAutoPublisher
 {
@@ -340,6 +341,7 @@ namespace TILAutoPublisher
             block.OnMoveDown += (sender, e) => MoveBlockDown((Control)sender);
         }
 
+
         private void AddEncouragementBlock()
         {
             EncouragementBlock block = new EncouragementBlock();
@@ -662,6 +664,50 @@ namespace TILAutoPublisher
             if (chkAutoStart.Checked)
             {
                 StartAnalysis();
+            }
+
+            LoadBannerPreviews();
+        }
+
+        private void LoadBannerPreviews()
+        {
+            flpBannerPreviews.Controls.Clear(); // Clear existing controls if any
+
+            for (int i = 1; i <= 26; i++)
+            {
+                Guna.UI2.WinForms.Guna2PictureBox pb = new Guna.UI2.WinForms.Guna2PictureBox();
+                pb.Size = new System.Drawing.Size(100, 60); // Set desired preview size
+                pb.SizeMode = PictureBoxSizeMode.Zoom; // Or PictureBoxSizeMode.StretchImage, etc.
+                pb.Cursor = Cursors.Hand;
+                pb.Tag = $"BannerImage{i}"; // Store the resource name or a path if loaded from file system
+
+                // Load image from resources.
+                // Replace "TILAutoWriter.Properties.Resources" with your actual resource namespace if different.
+                Image img = (Image)TILAutoWriter.Properties.Resources.ResourceManager.GetObject($"BannerImage{i}");
+                if (img != null)
+                {
+                    pb.Image = img;
+                }
+                else
+                {
+                    // Handle case where image resource is not found (e.g., set a placeholder or log an error)
+                    Console.WriteLine($"Warning: BannerImage{i} not found in resources.");
+                }
+
+                pb.Click += (s, e) =>
+                {
+                    // Open the preview form when a thumbnail is clicked
+                    using (ImagePreviewForm previewForm = new ImagePreviewForm(pb.Image, pb.Tag.ToString()))
+                    {
+                        if (previewForm.ShowDialog() == DialogResult.OK)
+                        {
+                            // If "Select" was clicked in the preview form
+                            txtBannerImage.Text = previewForm.SelectedImageIdentifier;
+                        }
+                    }
+                };
+
+                flpBannerPreviews.Controls.Add(pb);
             }
         }
 

@@ -36,6 +36,7 @@ namespace TILAutoPublisher
             this.label4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chkAutoStart = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flpBannerPreviews = new System.Windows.Forms.FlowLayoutPanel();
             this.btnLoadBannerImage = new Guna.UI2.WinForms.Guna2Button();
             this.txtBannerImage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -82,9 +83,9 @@ namespace TILAutoPublisher
             ((System.ComponentModel.ISupportInitialize)(this.pbBanner)).BeginInit();
             this.pnlScrollableContent.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // panel1
-            //
+            // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderRadius = 8;
             this.panel1.Controls.Add(this.lblAnalysisStatus);
@@ -94,7 +95,7 @@ namespace TILAutoPublisher
             this.panel1.Controls.Add(this.chkAutoStart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.FillColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0); // Changed from 160
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
@@ -103,9 +104,9 @@ namespace TILAutoPublisher
             this.panel1.ShadowDecoration.Enabled = true;
             this.panel1.Size = new System.Drawing.Size(1079, 140);
             this.panel1.TabIndex = 1;
-            //
+            // 
             // lblAnalysisStatus
-            //
+            // 
             this.lblAnalysisStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblAnalysisStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnalysisStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -114,9 +115,9 @@ namespace TILAutoPublisher
             this.lblAnalysisStatus.Size = new System.Drawing.Size(86, 22);
             this.lblAnalysisStatus.TabIndex = 4;
             this.lblAnalysisStatus.Text = "분석 대기 중";
-            //
+            // 
             // btnStartAnalysis
-            //
+            // 
             this.btnStartAnalysis.BorderRadius = 5;
             this.btnStartAnalysis.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnStartAnalysis.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -132,9 +133,9 @@ namespace TILAutoPublisher
             this.btnStartAnalysis.TabIndex = 3;
             this.btnStartAnalysis.Text = "분석 시작";
             this.btnStartAnalysis.Click += new System.EventHandler(this.btnStartAnalysis_Click);
-            //
+            // 
             // dtpAnalysisEndTime
-            //
+            // 
             this.dtpAnalysisEndTime.BorderColor = System.Drawing.Color.LightGray;
             this.dtpAnalysisEndTime.BorderRadius = 5;
             this.dtpAnalysisEndTime.Checked = true;
@@ -151,9 +152,9 @@ namespace TILAutoPublisher
             this.dtpAnalysisEndTime.Size = new System.Drawing.Size(140, 27);
             this.dtpAnalysisEndTime.TabIndex = 2;
             this.dtpAnalysisEndTime.Value = new System.DateTime(2025, 7, 20, 1, 45, 10, 0);
-            //
+            // 
             // label4
-            //
+            // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -162,9 +163,9 @@ namespace TILAutoPublisher
             this.label4.Size = new System.Drawing.Size(169, 22);
             this.label4.TabIndex = 1;
             this.label4.Text = "분석 종료 시각 (HH:MM):";
-            //
+            // 
             // chkAutoStart
-            //
+            // 
             this.chkAutoStart.AutoSize = true;
             this.chkAutoStart.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkAutoStart.CheckedState.BorderRadius = 0;
@@ -183,28 +184,39 @@ namespace TILAutoPublisher
             this.chkAutoStart.UncheckedState.BorderThickness = 0;
             this.chkAutoStart.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkAutoStart.UseVisualStyleBackColor = true;
-            //
+            // 
             // panel2
-            //
+            // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderRadius = 8;
+            this.panel2.Controls.Add(this.flpBannerPreviews);
             this.panel2.Controls.Add(this.btnLoadBannerImage);
             this.panel2.Controls.Add(this.txtBannerImage);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.FillColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 140); // Adjusted from 300
+            this.panel2.Location = new System.Drawing.Point(0, 140);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
             this.panel2.ShadowDecoration.Color = System.Drawing.Color.LightGray;
             this.panel2.ShadowDecoration.Depth = 10;
             this.panel2.ShadowDecoration.Enabled = true;
-            this.panel2.Size = new System.Drawing.Size(1079, 80);
+            this.panel2.Size = new System.Drawing.Size(1079, 160);
             this.panel2.TabIndex = 2;
-            //
+            // 
+            // flpBannerPreviews
+            // 
+            this.flpBannerPreviews.AutoScroll = true;
+            this.flpBannerPreviews.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpBannerPreviews.Location = new System.Drawing.Point(16, 60);
+            this.flpBannerPreviews.Name = "flpBannerPreviews";
+            this.flpBannerPreviews.Size = new System.Drawing.Size(1054, 80);
+            this.flpBannerPreviews.TabIndex = 3;
+            this.flpBannerPreviews.WrapContents = false;
+            // 
             // btnLoadBannerImage
-            //
+            // 
             this.btnLoadBannerImage.BorderRadius = 5;
             this.btnLoadBannerImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLoadBannerImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -220,9 +232,9 @@ namespace TILAutoPublisher
             this.btnLoadBannerImage.TabIndex = 2;
             this.btnLoadBannerImage.Text = "불러오기";
             this.btnLoadBannerImage.Click += new System.EventHandler(this.btnLoadBannerImage_Click);
-            //
+            // 
             // txtBannerImage
-            //
+            // 
             this.txtBannerImage.BorderRadius = 5;
             this.txtBannerImage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBannerImage.DefaultText = "";
@@ -240,9 +252,9 @@ namespace TILAutoPublisher
             this.txtBannerImage.SelectedText = "";
             this.txtBannerImage.Size = new System.Drawing.Size(820, 27);
             this.txtBannerImage.TabIndex = 1;
-            //
+            // 
             // label5
-            //
+            // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -251,9 +263,9 @@ namespace TILAutoPublisher
             this.label5.Size = new System.Drawing.Size(85, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "배너 이미지:";
-            //
+            // 
             // panel3
-            //
+            // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BorderRadius = 8;
             this.panel3.Controls.Add(this.txtGeminiApiKey);
@@ -266,7 +278,7 @@ namespace TILAutoPublisher
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.FillColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 220); // Adjusted from 380
+            this.panel3.Location = new System.Drawing.Point(0, 300);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(15);
@@ -275,9 +287,9 @@ namespace TILAutoPublisher
             this.panel3.ShadowDecoration.Enabled = true;
             this.panel3.Size = new System.Drawing.Size(1079, 240);
             this.panel3.TabIndex = 3;
-            //
+            // 
             // txtGeminiApiKey
-            //
+            // 
             this.txtGeminiApiKey.BorderRadius = 5;
             this.txtGeminiApiKey.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGeminiApiKey.DefaultText = "";
@@ -297,9 +309,9 @@ namespace TILAutoPublisher
             this.txtGeminiApiKey.Size = new System.Drawing.Size(890, 27);
             this.txtGeminiApiKey.TabIndex = 7;
             this.txtGeminiApiKey.UseSystemPasswordChar = true;
-            //
+            // 
             // label3
-            //
+            // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -308,9 +320,9 @@ namespace TILAutoPublisher
             this.label3.Size = new System.Drawing.Size(107, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Gemini API Key:";
-            //
+            // 
             // txtChatGptApiKey
-            //
+            // 
             this.txtChatGptApiKey.BorderRadius = 5;
             this.txtChatGptApiKey.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChatGptApiKey.DefaultText = "";
@@ -330,9 +342,9 @@ namespace TILAutoPublisher
             this.txtChatGptApiKey.Size = new System.Drawing.Size(890, 27);
             this.txtChatGptApiKey.TabIndex = 5;
             this.txtChatGptApiKey.UseSystemPasswordChar = true;
-            //
+            // 
             // label2
-            //
+            // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -341,9 +353,9 @@ namespace TILAutoPublisher
             this.label2.Size = new System.Drawing.Size(116, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "ChatGPT API Key:";
-            //
+            // 
             // txtTistoryPassword
-            //
+            // 
             this.txtTistoryPassword.BorderRadius = 5;
             this.txtTistoryPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTistoryPassword.DefaultText = "";
@@ -363,9 +375,9 @@ namespace TILAutoPublisher
             this.txtTistoryPassword.Size = new System.Drawing.Size(890, 27);
             this.txtTistoryPassword.TabIndex = 3;
             this.txtTistoryPassword.UseSystemPasswordChar = true;
-            //
+            // 
             // label8
-            //
+            // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -374,9 +386,9 @@ namespace TILAutoPublisher
             this.label8.Size = new System.Drawing.Size(130, 22);
             this.label8.TabIndex = 2;
             this.label8.Text = "티스토리 비밀번호:";
-            //
+            // 
             // txtTistoryId
-            //
+            // 
             this.txtTistoryId.BorderRadius = 5;
             this.txtTistoryId.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTistoryId.DefaultText = "";
@@ -394,9 +406,9 @@ namespace TILAutoPublisher
             this.txtTistoryId.SelectedText = "";
             this.txtTistoryId.Size = new System.Drawing.Size(890, 27);
             this.txtTistoryId.TabIndex = 1;
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -405,9 +417,9 @@ namespace TILAutoPublisher
             this.label1.Size = new System.Drawing.Size(115, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "티스토리 아이디:";
-            //
+            // 
             // panel4
-            //
+            // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BorderRadius = 8;
             this.panel4.Controls.Add(this.btnRemoveTag);
@@ -418,7 +430,7 @@ namespace TILAutoPublisher
             this.panel4.Controls.Add(this.label6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.FillColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(0, 460); // Adjusted from 620
+            this.panel4.Location = new System.Drawing.Point(0, 540);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(15);
@@ -427,9 +439,9 @@ namespace TILAutoPublisher
             this.panel4.ShadowDecoration.Enabled = true;
             this.panel4.Size = new System.Drawing.Size(1079, 290);
             this.panel4.TabIndex = 4;
-            //
+            // 
             // btnRemoveTag
-            //
+            // 
             this.btnRemoveTag.BorderRadius = 5;
             this.btnRemoveTag.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRemoveTag.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -445,9 +457,9 @@ namespace TILAutoPublisher
             this.btnRemoveTag.TabIndex = 6;
             this.btnRemoveTag.Text = "태그 삭제";
             this.btnRemoveTag.Click += new System.EventHandler(this.btnRemoveTag_Click);
-            //
+            // 
             // btnAddTag
-            //
+            // 
             this.btnAddTag.BorderRadius = 5;
             this.btnAddTag.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddTag.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -463,9 +475,9 @@ namespace TILAutoPublisher
             this.btnAddTag.TabIndex = 5;
             this.btnAddTag.Text = "태그 추가";
             this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click);
-            //
+            // 
             // txtNewTag
-            //
+            // 
             this.txtNewTag.BorderRadius = 5;
             this.txtNewTag.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewTag.DefaultText = "";
@@ -483,9 +495,9 @@ namespace TILAutoPublisher
             this.txtNewTag.SelectedText = "";
             this.txtNewTag.Size = new System.Drawing.Size(790, 27);
             this.txtNewTag.TabIndex = 3;
-            //
+            // 
             // flpTags
-            //
+            // 
             this.flpTags.AutoScroll = true;
             this.flpTags.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flpTags.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -495,9 +507,9 @@ namespace TILAutoPublisher
             this.flpTags.Padding = new System.Windows.Forms.Padding(5);
             this.flpTags.Size = new System.Drawing.Size(1050, 164);
             this.flpTags.TabIndex = 4;
-            //
+            // 
             // txtTags
-            //
+            // 
             this.txtTags.BorderRadius = 5;
             this.txtTags.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTags.DefaultText = "";
@@ -516,9 +528,9 @@ namespace TILAutoPublisher
             this.txtTags.SelectedText = "";
             this.txtTags.Size = new System.Drawing.Size(954, 27);
             this.txtTags.TabIndex = 1;
-            //
+            // 
             // label6
-            //
+            // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -527,9 +539,9 @@ namespace TILAutoPublisher
             this.label6.Size = new System.Drawing.Size(36, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "태그:";
-            //
+            // 
             // panel5
-            //
+            // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderRadius = 8;
             this.panel5.Controls.Add(this.btnAddEncouragement);
@@ -538,7 +550,7 @@ namespace TILAutoPublisher
             this.panel5.Controls.Add(this.btnAddContentBlock);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.FillColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(0, 750); // Adjusted from 910
+            this.panel5.Location = new System.Drawing.Point(0, 830);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(15);
@@ -547,9 +559,9 @@ namespace TILAutoPublisher
             this.panel5.ShadowDecoration.Enabled = true;
             this.panel5.Size = new System.Drawing.Size(1079, 80);
             this.panel5.TabIndex = 5;
-            //
+            // 
             // btnAddEncouragement
-            //
+            // 
             this.btnAddEncouragement.BorderRadius = 5;
             this.btnAddEncouragement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddEncouragement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -565,9 +577,9 @@ namespace TILAutoPublisher
             this.btnAddEncouragement.TabIndex = 3;
             this.btnAddEncouragement.Text = "격려 메시지 추가";
             this.btnAddEncouragement.Click += new System.EventHandler(this.btnAddEncouragement_Click);
-            //
+            // 
             // btnAddRetrospection
-            //
+            // 
             this.btnAddRetrospection.BorderRadius = 5;
             this.btnAddRetrospection.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddRetrospection.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -583,9 +595,9 @@ namespace TILAutoPublisher
             this.btnAddRetrospection.TabIndex = 2;
             this.btnAddRetrospection.Text = "회고 블록 추가";
             this.btnAddRetrospection.Click += new System.EventHandler(this.btnAddRetrospection_Click);
-            //
+            // 
             // btnAddImageBlock
-            //
+            // 
             this.btnAddImageBlock.BorderRadius = 5;
             this.btnAddImageBlock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddImageBlock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -601,9 +613,9 @@ namespace TILAutoPublisher
             this.btnAddImageBlock.TabIndex = 1;
             this.btnAddImageBlock.Text = "이미지 블록 추가";
             this.btnAddImageBlock.Click += new System.EventHandler(this.btnAddImageBlock_Click);
-            //
+            // 
             // btnAddContentBlock
-            //
+            // 
             this.btnAddContentBlock.BorderRadius = 5;
             this.btnAddContentBlock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddContentBlock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -619,9 +631,9 @@ namespace TILAutoPublisher
             this.btnAddContentBlock.TabIndex = 0;
             this.btnAddContentBlock.Text = "콘텐츠 블록 추가";
             this.btnAddContentBlock.Click += new System.EventHandler(this.btnAddContentBlock_Click);
-            //
+            // 
             // panel6
-            //
+            // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BorderRadius = 8;
             this.panel6.Controls.Add(this.btnPublish);
@@ -629,7 +641,7 @@ namespace TILAutoPublisher
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.FillColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(0, 830); // Adjusted from 990
+            this.panel6.Location = new System.Drawing.Point(0, 910);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(15);
@@ -638,9 +650,9 @@ namespace TILAutoPublisher
             this.panel6.ShadowDecoration.Enabled = true;
             this.panel6.Size = new System.Drawing.Size(1079, 80);
             this.panel6.TabIndex = 6;
-            //
+            // 
             // btnPublish
-            //
+            // 
             this.btnPublish.BorderRadius = 5;
             this.btnPublish.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPublish.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -656,9 +668,9 @@ namespace TILAutoPublisher
             this.btnPublish.TabIndex = 2;
             this.btnPublish.Text = "발행하기";
             this.btnPublish.Click += new System.EventHandler(this.btnPublish_Click);
-            //
+            // 
             // txtTitle
-            //
+            // 
             this.txtTitle.BorderRadius = 5;
             this.txtTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTitle.DefaultText = "";
@@ -676,9 +688,9 @@ namespace TILAutoPublisher
             this.txtTitle.SelectedText = "";
             this.txtTitle.Size = new System.Drawing.Size(820, 27);
             this.txtTitle.TabIndex = 1;
-            //
+            // 
             // label7
-            //
+            // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -687,20 +699,20 @@ namespace TILAutoPublisher
             this.label7.Size = new System.Drawing.Size(36, 22);
             this.label7.TabIndex = 0;
             this.label7.Text = "제목:";
-            //
+            // 
             // flowLayoutPanel1
-            //
-            this.flowLayoutPanel1.AutoScroll = false; // Changed from true
-            this.flowLayoutPanel1.AutoSize = true; // Added
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink; // Added
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top; // Changed from Fill
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 910); // Adjusted from 1070
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 990);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(0, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            // this.flowLayoutPanel1.Size = new System.Drawing.Size(1079, 100); // Removed
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1079, 50);
             this.flowLayoutPanel1.TabIndex = 7;
-            //
+            // 
             // pbBanner
-            //
+            // 
             this.pbBanner.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbBanner.Image = global::TILAutoWriter.Properties.Resources.BannerImage;
             this.pbBanner.ImageRotate = 0F;
@@ -708,48 +720,48 @@ namespace TILAutoPublisher
             this.pbBanner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbBanner.Name = "pbBanner";
             this.pbBanner.Padding = new System.Windows.Forms.Padding(0, 40, 0, 0);
-            this.pbBanner.Size = new System.Drawing.Size(1079, 160);
+            this.pbBanner.Size = new System.Drawing.Size(1100, 160);
             this.pbBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbBanner.TabIndex = 0;
             this.pbBanner.TabStop = false;
             this.pbBanner.Click += new System.EventHandler(this.pbBanner_Click);
-            //
+            // 
             // guna2BorderlessForm1
-            //
+            // 
             this.guna2BorderlessForm1.BorderRadius = 10;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            //
+            // 
             // guna2ShadowForm1
-            //
+            // 
             this.guna2ShadowForm1.BorderRadius = 10;
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
-            //
+            // 
             // guna2ControlBox1
-            //
+            // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(974, 6);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(985, 6);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox1.TabIndex = 8;
-            //
+            // 
             // guna2ControlBox2
-            //
+            // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1025, 6);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1036, 6);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox2.TabIndex = 9;
-            //
+            // 
             // guna2HtmlLabel1
-            //
+            // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("나눔바른고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -759,15 +771,15 @@ namespace TILAutoPublisher
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "Til 작성 프로그램";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
-            //
+            // 
             // guna2DragControl1
-            //
+            // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.pbBanner;
             this.guna2DragControl1.UseTransparentDrag = true;
-            //
+            // 
             // pnlScrollableContent
-            //
+            // 
             this.pnlScrollableContent.AutoScroll = true;
             this.pnlScrollableContent.Controls.Add(this.flowLayoutPanel1);
             this.pnlScrollableContent.Controls.Add(this.panel6);
@@ -777,19 +789,18 @@ namespace TILAutoPublisher
             this.pnlScrollableContent.Controls.Add(this.panel2);
             this.pnlScrollableContent.Controls.Add(this.panel1);
             this.pnlScrollableContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlScrollableContent.Location = new System.Drawing.Point(0, 160); // Starts after pbBanner
+            this.pnlScrollableContent.Location = new System.Drawing.Point(0, 160);
             this.pnlScrollableContent.Name = "pnlScrollableContent";
-            this.pnlScrollableContent.Size = new System.Drawing.Size(1100, 890); // Remaining height
+            this.pnlScrollableContent.Size = new System.Drawing.Size(1100, 890);
             this.pnlScrollableContent.TabIndex = 10;
-            //
+            // 
             // MainForm
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = false; // Set to false on the main form
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1100, 1050);
-            this.Controls.Add(this.pnlScrollableContent); // Add the new panel
+            this.Controls.Add(this.pnlScrollableContent);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -814,6 +825,7 @@ namespace TILAutoPublisher
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBanner)).EndInit();
             this.pnlScrollableContent.ResumeLayout(false);
+            this.pnlScrollableContent.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -824,6 +836,7 @@ namespace TILAutoPublisher
         private Guna.UI2.WinForms.Guna2Panel panel1;
         private Guna.UI2.WinForms.Guna2CheckBox chkAutoStart;
         private Guna.UI2.WinForms.Guna2Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flpBannerPreviews; // Added
         private Guna.UI2.WinForms.Guna2Button btnLoadBannerImage;
         private Guna.UI2.WinForms.Guna2TextBox txtBannerImage;
         private Guna.UI2.WinForms.Guna2HtmlLabel label5;
